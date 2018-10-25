@@ -24,7 +24,7 @@ end
     Planet.create(name: Faker::StarWars.unique.planet)
 end
 
-Soldier.each do |soldier|
+Soldier.all.each do |soldier|
     rand(5).times do
         planet = Planet.all.sample
         code_specie = Faker::StarWars.specie
@@ -37,8 +37,9 @@ Soldier.each do |soldier|
     end
 end
 
-puts "#{Squadron.count} squadrons"
-puts "#{Soldier.count} soldiers"
-puts "#{Planet.count} planets"
-puts "#{Assignment.count} assignments"
-puts Squadron.count + Soldier.count + Planet.count + Assignment.count
+puts "Database has been seeded."
+puts "Added #{Squadron.count} squadrons"
+puts "Added #{Soldier.count} soldiers"
+puts "Added #{Planet.count} planets"
+puts "Added #{Assignment.count} assignments"
+puts "Total Records: #{Squadron.count + Soldier.count + Planet.count + Assignment.count}"
