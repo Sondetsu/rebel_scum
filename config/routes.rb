@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :rebels, only: [:index]
-  resources :about, only: [:index]
+
+  get 'about', to: 'about#index'
 
   #get 'rebels/index'
   #get 'rebels/show'
