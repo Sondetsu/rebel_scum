@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'data/index'
-  get 'data/show'
   resources :rebels, only: [:index]
+  resources :students, only: [:index, :show]
 
   get 'about', to: 'about#index'
 
