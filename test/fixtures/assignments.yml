@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  operation_code: MyString
+  soldier: one
+  planet: one
+
+two:
+  operation_code: MyString
+  soldier: two
+  planet: two

@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_25_012752) do
+ActiveRecord::Schema.define(version: 2018_10_25_012938) do
+
+  create_table "assignments", force: :cascade do |t|
+    t.string "operation_code"
+    t.integer "soldier_id"
+    t.integer "planet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["planet_id"], name: "index_assignments_on_planet_id"
+    t.index ["soldier_id"], name: "index_assignments_on_soldier_id"
+  end
 
   create_table "planets", force: :cascade do |t|
     t.string "name"
