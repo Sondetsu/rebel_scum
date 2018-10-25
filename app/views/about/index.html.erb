@@ -1,2 +1,31 @@
-<h1>About#index</h1>
-<p>Find me in app/views/about/index.html.erb</p>
+<h2>About This Project</h2>
+<p>
+    This project uses the Faker gem to create a Star Wars related database. It includes 4 tables.
+</p>
+<p>
+    The first table consists of the squadrons, containing the name of the squadron by using the StarWars gem.
+</p>
+<p>
+    The second table consists of Rebel soldiers, containing randomly generated names, by using the FunnyName gem 
+    (because Star Wars characters have funny names), as well as randomly generated ages, by using the Number gem.
+</p>
+<p>
+    The third table consists of the planets, containing the name of the planet by using the StarWars gem.
+</p>
+<p>
+    Finally, the fourth table contains assignments from when soldiers served an operation on them. 
+    It includes the soldier, the planet they were assigned to at the time, 
+    along with an operation code that consists of a species from the StarWars gem and a number from the Number gem.
+</p>
+<p>
+    This allows each Soldier page to contain all the planets they have previously been assigned on, 
+    as well as allow the Planet page to contain all the soldiers that have previously been assigned on it. 
+    A planet can have many soldiers having been stationed with it, through assignments. 
+    A soldier can have served on many planets, through assignments. 
+    A soldier can only currently serve with one squadron. A squadron can have many soldiers serving on it. 
+    An assignment can have only one soldier and one planet.
+</p>
+<p>
+    Below is an ERD, containing the layout of the tables.
+</p>
+<%= image_tag "erd.PNG" %>
