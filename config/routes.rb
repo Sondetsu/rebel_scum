@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'search/index'
+  get 'search/results'
   resources :all_results, only: [:index]
   resources :squadrons, only: [:index, :show]
   resources :soldiers, only: [:index, :show]
