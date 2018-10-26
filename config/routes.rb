@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'squadron/index'
+  get 'squadron/show'
   get 'categories/index'
   resources :rebels, only: [:index]
   resources :students, only: [:index, :show]
