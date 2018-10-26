@@ -5,6 +5,6 @@ class SquadronsController < ApplicationController
 
   def show
     @squadron = Squadron.find(params[:id])
-    @soldiers = squadron.soldier
+    @soldiers = @squadron.soldiers
   end
 end
