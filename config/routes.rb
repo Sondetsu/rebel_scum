@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'all_results/index'
   get 'soldiers/index'
   get 'soldiers/show'
   get 'planets/index'

@@ -1,0 +1,2 @@
+module AllResultsHelper
+end
