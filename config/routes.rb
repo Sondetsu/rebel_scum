@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'soldiers/index'
+  get 'soldiers/show'
   get 'planets/index'
   get 'planets/show'
   get 'squadrons/index'
