@@ -5,6 +5,6 @@ class SoldiersController < ApplicationController
 
   def show
     @soldier = Soldier.find(params[:id])
-    @planets = @soldiers.planets
+    @planets = @soldier.planets
   end
 end
