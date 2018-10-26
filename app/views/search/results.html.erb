@@ -1,2 +1,41 @@
-<h1>Search#results</h1>
-<p>Find me in app/views/search/results.html.erb</p>
+<% if @squadrons.empty? && @planets.empty? && @soldiers.empty? %>
+    <h2>No results were found.</h2>
+<% else %>    
+    <h2>Total Results: <%= @squadrons.size + @planets.size + @soldiers.size %></h2>
+    <% if @squadrons.empty? %>
+        <h3>No squadrons were found.</h3>
+    <% else %>
+        <h3>Squadron Results: <%= @squadrons.size %></h3>
+        <ul>
+        <% @squadrons.each do |squadron| %>
+            <li>
+            <%= link_to squadron.name, squadron %>
+            </li>
+        <% end %>
+        </ul>
+    <% end %>
+    <% if @planets.empty? %>
+        <h3>No planets were found.</h3>
+    <% else %>
+        <h3>Planet Results: <%= @planets.size %></h3>
+        <ul>
+        <% @planets.each do |planet| %>
+            <li>
+            <%= link_to planet.name, planet %>
+            </li>
+        <% end %>
+        </ul>
+    <% end %>
+    <% if @soldiers.empty? %>
+        <h3>No soldiers were found.</h3>
+    <% else %>
+        <h3>Soldier Results: <%= @soldiers.size %></h3>
+        <ul>
+        <% @soldiers.each do |soldier| %>
+            <li>
+            <%= link_to soldier.name, soldier %>
+            </li>
+        <% end %>
+        </ul>
+    <% end %>
+<% end %>

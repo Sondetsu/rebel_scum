@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
-  get 'search/index'
-  get 'search/results'
   resources :all_results, only: [:index]
   resources :squadrons, only: [:index, :show]
   resources :soldiers, only: [:index, :show]
   resources :planets, only: [:index, :show]
   resources :categories, only: [:index]
   resources :rebels, only: [:index]
+  resources :about, only: [:index]
 
-  get 'about', to: 'about#index'
-
-  #get 'rebels/index'
-  #get 'rebels/show'
+  resources :search, only: [:index] do
+    collection do
+      get 'results'
+    end
+  end
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root to: 'rebels#index'
