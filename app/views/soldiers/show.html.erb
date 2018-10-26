@@ -2,11 +2,15 @@
 
 <h3>Age: <%= @soldier.age %></h3>
 
-<h3>Planets this soldier has been previously assigned to:</h3>
-<ul>
-  <% @planets.each do |planet| %>
-    <li>
-      <%= link_to planet.name, planet %>
-    </li>
-  <% end %>
-</ul>
+<% if @planets.empty? %>
+    <h3>This soldier has never been assigned to any planets. :( </h3>
+<% else %>
+    <h3>Planets this soldier has been previously assigned to:</h3>
+    <ul>
+    <% @planets.each do |planet| %>
+        <li>
+        <%= link_to planet.name, planet %>
+        </li>
+    <% end %>
+    </ul>
+<% end %>

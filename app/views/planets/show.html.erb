@@ -1,2 +1,14 @@
-<h1>Planets#show</h1>
-<p>Find me in app/views/planets/show.html.erb</p>
+<h2><%= @planet.name %></h2>
+
+<% if @soldiers.empty? %>
+    <h3>No soldiers have ever been assigned to this planet. :(</h3>
+<% else %>
+    <h3>Soldiers that have been previously assigned to this planet:</h3>
+    <ul>
+    <% @soldiers.each do |soldier| %>
+        <li>
+        <%= link_to soldier.name, soldier %>
+        </li>
+    <% end %>
+    </ul>
+<% end %>

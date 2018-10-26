@@ -5,5 +5,6 @@ class PlanetsController < ApplicationController
 
   def show
     @planet = Planet.find(params[:id])
+    @soldiers = @planet.soldiers
   end
 end
