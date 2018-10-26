@@ -12,9 +12,6 @@
   <body>
     <header>
       <h1>Rebel Scum</h1>
-    </header>
-    <%= yield %>
-    <footer>
       <nav>
         <ul>
           <li><%= link_to 'Home', rebels_path %></li>
@@ -23,6 +20,7 @@
           <li><%= link_to 'Search', search_index_path %></li>
         </ul>
       </nav>
-    </footer>
+    </header>
+    <%= yield %>
   </body>
 </html>

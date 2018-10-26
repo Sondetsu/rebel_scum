@@ -1,1 +1,10 @@
 @import "bootstrap";
+
+header {
+    text-align: center;
+
+    nav ul li {
+        display: inline;
+        padding: 10px;
+    }
+}
