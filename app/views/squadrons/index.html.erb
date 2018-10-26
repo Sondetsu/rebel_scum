@@ -1,2 +1,8 @@
-<h1>Squadrons#index</h1>
-<p>Find me in app/views/squadrons/index.html.erb</p>
+<h2>Squadrons</h2>
+<ul>
+  <% @squadrons.each do |squadron| %>
+    <li>
+      <%= link_to squadron.name, squadron %>
+    </li>
+  <% end %>
+</ul>

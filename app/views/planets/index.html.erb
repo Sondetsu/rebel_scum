@@ -1,2 +1,8 @@
-<h1>Planets#index</h1>
-<p>Find me in app/views/planets/index.html.erb</p>
+<h2>Planets</h2>
+<ul>
+  <% @planets.each do |planet| %>
+    <li>
+      <%= link_to planet.name, planet %>
+    </li>
+  <% end %>
+</ul>
