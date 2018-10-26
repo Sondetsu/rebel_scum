@@ -1,16 +1,10 @@
 Rails.application.routes.draw do
-  get 'all_results/index'
-  get 'soldiers/index'
-  get 'soldiers/show'
-  get 'planets/index'
-  get 'planets/show'
-  get 'squadrons/index'
-  get 'squadrons/show'
-  get 'squadron/index'
-  get 'squadron/show'
-  get 'categories/index'
+  resources :all_results, only: [:index]
+  resources :squadrons, only: [:index, :show]
+  resources :soldiers, only: [:index, :show]
+  resources :planets, only: [:index, :show]
+  resources :categories, only: [:index]
   resources :rebels, only: [:index]
-  resources :students, only: [:index, :show]
 
   get 'about', to: 'about#index'
 

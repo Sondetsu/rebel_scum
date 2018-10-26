@@ -1,2 +1,9 @@
-<h1>AllResults#index</h1>
-<p>Find me in app/views/all_results/index.html.erb</p>
+<h2>All Results</h2>
+<h3>Squadrons</h3>
+<ul>
+  <% @squadrons.each do |squadron| %>
+    <li>
+      <%= link_to squadron.name, squadron %>
+    </li>
+  <% end %>
+</ul>
