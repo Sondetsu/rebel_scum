@@ -7,3 +7,19 @@
     </li>
   <% end %>
 </ul>
+<h3>Planets</h3>
+<ul>
+  <% @planets.each do |planet| %>
+    <li>
+      <%= link_to planet.name, planet %>
+    </li>
+  <% end %>
+</ul>
+<h3>Soldiers</h3>
+<ul>
+  <% @soldiers.each do |soldier| %>
+    <li>
+      <%= link_to soldier.name, soldier %>
+    </li>
+  <% end %>
+</ul>

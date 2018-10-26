@@ -1,2 +1,11 @@
-<h1>Squadrons#show</h1>
-<p>Find me in app/views/squadrons/show.html.erb</p>
+<h2><%= @squadron.name %> Squadron</h2>
+
+<h3>Soldiers currently serving under this squadron:</h3>
+
+<ul>
+  <% @soldiers.each do |soldier| %>
+    <li>
+      <%= link_to soldier.name, soldier %>
+    </li>
+  <% end %>
+</ul>
