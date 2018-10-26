@@ -1,13 +1,13 @@
 require 'test_helper'
 
-class SquadronControllerTest < ActionDispatch::IntegrationTest
+class SquadronsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get squadron_index_url
+    get squadrons_index_url
     assert_response :success
   end
 
   test "should get show" do
-    get squadron_show_url
+    get squadrons_show_url
     assert_response :success
   end
 
